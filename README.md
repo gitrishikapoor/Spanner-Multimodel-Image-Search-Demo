@@ -29,7 +29,7 @@ An enterprise-ready guide and production reference architecture for building hig
 | :--- | :--- | :--- |
 | **Search Mechanism** | Sequential distributed table scan | Hierarchical ScaNN cluster index tree |
 | **Algorithmic Complexity** | $O(N)$ (scales linearly with rows) | $O(\log N)$ (scales sub-linearly/logarithmically) |
-| **Query Latency** | Milliseconds on small catalogs; seconds at scale | Single-digit milliseconds across millions of vectors |
+| **Query Latency** | Milliseconds on small catalogs; seconds at scale | Milliseconds across millions of vectors |
 | **Compute Overhead** | High (evaluates cosine distance across every row) | Minimal (prunes non-candidate clusters) |
 | **Recall Accuracy** | 100% exact mathematical recall | 95%+ tunable recall via `num_leaves_to_search` |
 | **Best Used For** | Prototyping, small datasets (<50K rows) | Production scale, high-QPS low-latency retail search |
